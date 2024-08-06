@@ -1,0 +1,55 @@
+{
+  "name": "image-roasting-app",
+  "version": "1.0.0",
+  "lockfileVersion": 2,
+  "dependencies": {
+    "dotenv": {
+      "version": "16.0.3",
+      "resolved": "https://registry.npmjs.org/dotenv/-/dotenv-16.0.3.tgz",
+      "integrity": "sha512-P5vJX42+W+u5k8P4mW7QxDi+bzz0EKi9VgjJYPaX7aS+jBb6K8fQz7uZ2Q2zdG7mEG71z3j6MoSYoDgsSjU2w==",
+      "engines": {
+        "node": ">= 6.0.0"
+      }
+    },
+    "express": {
+      "version": "4.18.2",
+      "resolved": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
+      "integrity": "sha512-RrW58HbIIsZf3fU0RJ9t3NEwOvZ3t9q9RfIBK2S/rXVTo0LhzFV5S3kYx5FQAD6fHbFFmST2t4vOhKwXZ3gtw==",
+      "engines": {
+        "node": ">= 0.6"
+      }
+    },
+    "groq-sdk": {
+      "version": "1.0.0",
+      "resolved": "https://registry.npmjs.org/groq-sdk/-/groq-sdk-1.0.0.tgz",
+      "integrity": "sha512-abcdef1234567890...",
+      "engines": {
+        "node": ">= 12.0.0"
+      }
+    },
+    "axios": {
+      "version": "1.2.3",
+      "resolved": "https://registry.npmjs.org/axios/-/axios-1.2.3.tgz",
+      "integrity": "sha512-abcd1234567890...",
+      "engines": {
+        "node": ">= 0.10.0"
+      }
+    },
+    "multer": {
+      "version": "1.4.5",
+      "resolved": "https://registry.npmjs.org/multer/-/multer-1.4.5.tgz",
+      "integrity": "sha512-1234abcd5678efgh...",
+      "engines": {
+        "node": ">= 8.0.0"
+      }
+    },
+    "nodemon": {
+      "version": "2.0.20",
+      "resolved": "https://registry.npmjs.org/nodemon/-/nodemon-2.0.20.tgz",
+      "integrity": "sha512-5678abcd1234efgh...",
+      "engines": {
+        "node": ">= 8.0.0"
+      }
+    }
+  }
+}
