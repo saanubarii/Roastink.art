@@ -1,0 +1,15 @@
+{
+  "name": "roast-image-app",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "dotenv": "^16.0.0",
+    "groq-sdk": "^1.0.0",
+    "@google/generative-ai": "^1.0.0"
+  }
+}
