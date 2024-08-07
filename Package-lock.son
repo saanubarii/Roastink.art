@@ -2,54 +2,101 @@
   "name": "image-roasting-app",
   "version": "1.0.0",
   "lockfileVersion": 2,
-  "dependencies": {
-    "dotenv": {
+  "requires": true,
+  "packages": {
+    "": {
+      "name": "image-roasting-app",
+      "version": "1.0.0",
+      "dependencies": {
+        "axios": "^1.2.3",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "groq-sdk": "^1.0.0",
+        "multer": "^1.4.5"
+      },
+      "devDependencies": {
+        "nodemon": "^2.0.20"
+      }
+    },
+    "node_modules/axios": {
+      "version": "1.2.3",
+      "resolved": "https://registry.npmjs.org/axios/-/axios-1.2.3.tgz",
+      "integrity": "sha512-...",
+      "requires": {
+        "follow-redirects": "^1.14.7"
+      }
+    },
+    "node_modules/dotenv": {
       "version": "16.0.3",
       "resolved": "https://registry.npmjs.org/dotenv/-/dotenv-16.0.3.tgz",
-      "integrity": "sha512-P5vJX42+W+u5k8P4mW7QxDi+bzz0EKi9VgjJYPaX7aS+jBb6K8fQz7uZ2Q2zdG7mEG71z3j6MoSYoDgsSjU2w==",
+      "integrity": "sha512-...",
       "engines": {
         "node": ">= 6.0.0"
       }
     },
-    "express": {
+    "node_modules/express": {
       "version": "4.18.2",
       "resolved": "https://registry.npmjs.org/express/-/express-4.18.2.tgz",
-      "integrity": "sha512-RrW58HbIIsZf3fU0RJ9t3NEwOvZ3t9q9RfIBK2S/rXVTo0LhzFV5S3kYx5FQAD6fHbFFmST2t4vOhKwXZ3gtw==",
-      "engines": {
-        "node": ">= 0.6"
+      "integrity": "sha512-...",
+      "requires": {
+        "accepts": "~1.3.8",
+        "array-flatten": "1.1.1",
+        "body-parser": "1.19.2",
+        "content-disposition": "0.5.4",
+        "cookie": "0.5.0",
+        "cookie-signature": "1.0.6",
+        "debug": "2.6.9",
+        "depd": "~1.1.2",
+        "encodeurl": "~1.0.2",
+        "escape-html": "~1.0.3",
+        "etag": "~1.8.1",
+        "finalhandler": "1.1.2",
+        "fresh": "0.5.2",
+        "merge-descriptors": "1.0.1",
+        "methods": "~1.1.2",
+        "on-finished": "~2.3.0",
+        "parseurl": "~1.3.3",
+        "path-to-regexp": "0.1.7",
+        "proxy-addr": "~2.0.7",
+        "qs": "6.10.3",
+        "range-parser": "~1.2.1",
+        "safe-buffer": "5.1.2",
+        "send": "0.17.2",
+        "serve-static": "1.14.2",
+        "setprototypeof": "1.2.0",
+        "statuses": "~1.5.0",
+        "type-is": "~1.6.18",
+        "utils-merge": "1.0.1",
+        "vary": "~1.1.2"
       }
     },
-    "groq-sdk": {
+    "node_modules/groq-sdk": {
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/groq-sdk/-/groq-sdk-1.0.0.tgz",
-      "integrity": "sha512-abcdef1234567890...",
-      "engines": {
-        "node": ">= 12.0.0"
+      "integrity": "sha512-...",
+      "requires": {
+        "axios": "^1.2.3"
       }
     },
-    "axios": {
-      "version": "1.2.3",
-      "resolved": "https://registry.npmjs.org/axios/-/axios-1.2.3.tgz",
-      "integrity": "sha512-abcd1234567890...",
-      "engines": {
-        "node": ">= 0.10.0"
-      }
-    },
-    "multer": {
+    "node_modules/multer": {
       "version": "1.4.5",
       "resolved": "https://registry.npmjs.org/multer/-/multer-1.4.5.tgz",
-      "integrity": "sha512-1234abcd5678efgh...",
-      "engines": {
-        "node": ">= 8.0.0"
+      "integrity": "sha512-...",
+      "requires": {
+        "append-field": "^1.0.0",
+        "busboy": "^0.3.1",
+        "concat-stream": "^1.6.2",
+        "mkdirp": "^0.5.5",
+        "object-assign": "^4.1.1",
+        "on-finished": "^2.3.0",
+        "streamsearch": "^1.1.0",
+        "type-is": "~1.6.18"
       }
     },
-    "nodemon": {
+    "node_modules/nodemon": {
       "version": "2.0.20",
       "resolved": "https://registry.npmjs.org/nodemon/-/nodemon-2.0.20.tgz",
-      "integrity": "sha512-5678abcd1234efgh...",
-      "engines": {
-        "node": ">= 8.0.0"
-      }
+      "integrity": "sha512-..."
     }
   }
 }
