@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Roasting AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Your Image for Roasting</h1>
+    <div class="upload-container">
+      <button class="dropbtn">Upload Image</button>
+      <div id="myDropdown" class="dropdown-content">
+        <input type="file" id="fileInput">
+        <button id="uploadButton">Upload</button>
+      </div>
+    </div>
+    <div class="image-preview" id="imagePreview"></div>
+    <div class="response-container">
+      <p id="responseText"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content input[type="file"] {
+  padding: 12px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-content button {
+  padding: 12px 16px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-content button:hover {
+  background-color: #3e8e41;
+}
+
+.image-preview {
+  margin-top: 20px;
+}
+
+.response-container {
+  margin-top: 20px;
+}
+
+.show {
+  display: block;
+}
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const uploadButton = document.getElementById('uploadButton');
+  const fileInput = document.getElementById('fileInput');
+  const uploadForm = document.getElementById('uploadForm');
+  const imagePreview = document.getElementById('imagePreview');
+  const roastTextContainer = document.getElementById('roastText');
+
+  uploadButton.addEventListener('click', () => {
+    fileInput.click();
+  });
+
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files.length > 0) {
+      const formData = new FormData(uploadForm);
+
+      fetch('/upload', {
+        method: 'POST',
+        body: formData,
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.imageUrl) {
+            imagePreview.src = data.imageUrl;
+            roastTextContainer.textContent = data.roastText;
+          } else {
+            roastTextContainer.textContent = 'Failed to upload image and get roast text.';
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          roastTextContainer.textContent = 'Error uploading image.';
+        });
+    }
+  });
+});
+
+
+</script>
